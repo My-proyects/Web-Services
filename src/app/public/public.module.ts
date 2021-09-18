@@ -6,6 +6,7 @@ import { PublicRoutingModule } from "./public-routing.module";
 import { MainComponent } from "./main/main.component";
 import { NoticiasComponent } from "./noticias/noticias.component";
 import { CovidComponent } from "./covid/covid.component";
+import { JuegoComponent } from './juego/juego.component';
 
 @NgModule({
     imports: [
@@ -15,7 +16,8 @@ import { CovidComponent } from "./covid/covid.component";
     declarations: [
       MainComponent,
       NoticiasComponent,
-      CovidComponent
+      CovidComponent,
+      JuegoComponent
     ],
     exports: [
         MainComponent

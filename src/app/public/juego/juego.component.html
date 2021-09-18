@@ -1,0 +1,108 @@
+<div class="row d-flex justify-content-center">
+    
+    <div class="col-md-9 text-center py-4 mt-2" *ngIf="inicio==true;else name">
+        <p class="h4">Juego del Horcadito</p>
+        <img src="http://2.bp.blogspot.com/_Jhv94qcdI-0/TQkikporgaI/AAAAAAAAABY/fnYSQ39ZTjw/s1600/Ahorcado.gif" alt="item-photo" width="800" height="600">
+        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="iniciarPartida()">Iniciar
+            Partida</button>
+    </div>
+    <ng-template #name>
+
+        <div class="col-md-12 mt-4 d-flex justify-content-center ">
+            <p class="col-md-6  d-flex justify-content-center h4 ">Puntaje: {{juego.puntaje}} </p>
+            <p class="col-md-6  d-flex justify-content-center h4">Vidas: {{juego.vidas}} </p>
+        </div>
+        <!--
+            aqui ban las imagenes para adivinar
+        -->
+        <div class="col-md-12 d-flex justify-content-center ">
+            <div class="col-md-9 d-flex justify-content-center p-3 mt-5 border border-dark">
+                <img src="{{palabra.url}}" alt="item-photo" width="360" height="300">
+            </div>
+        </div>
+
+        <!--
+            en esta seccion ban los input para adivinar las letras
+        -->
+        <div class="col-md-5">
+            <div class="row mt-4 mb-0">
+                <div *ngFor="let item of palabra.ingles; index as i" class="mx-auto">
+                    <input id="{{ i }}" class="form-control text-center text-uppercase border border-dark" size="1"
+                        type="text" maxlength="1" (keyup)="verificar(i,$event)" (focus)="probarInput(i)">
+                </div>
+            </div>
+        </div>
+
+        <!--seccion de los botones para el tecladi virtual-->
+        <div class="col-md-12 d-flex justify-content-center mt-0">
+            <div class="col-md-9 d-flex mt-4">
+                <div class="row  d-flex justify-content-center">
+                    <div class=" btn btn-secondary " *ngFor="let item of letras">
+                        <button id={{item}} #letras type=" button" class=" btn btn-info "
+                            (click)="cargarInput(item)">{{item}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 mt-4 d-flex justify-content-center ">
+            <p class="col-md-9  d-flex justify-content-center h4">{{palabra.espaniol}}</p>
+        </div>
+        <div class="col-md-9">
+            <button type="button" class="btn btn-primary btn-lg btn-block h4" (click)="terminarJuego()">Rendirse</button>
+        </div>
+
+        <!-- Modal -->
+        
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Perdiste Vuelve a Intentarlo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Puntaje: {{juego.puntaje}}
+                            <br>
+                            Vidas: {{juego.vidas}}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                (click)="terminarJuego()">Salir</button>
+                            <button type="button" class="btn btn-primary" (click)="startGame()"
+                                data-dismiss="modal">Reiniciar Partida</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Modal wining-->
+            <div class="modal fade" id="modalWin" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modaltitle">Ganaste Felicidades</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Puntaje: {{juego.puntaje}}
+                            <br>
+                            Vidas: {{juego.vidas}}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                (click)="terminarJuego()">Salir</button>
+                            <button type="button" class="btn btn-primary" (click)="startGame()"
+                                data-dismiss="modal">Reiniciar Partida</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </ng-template>
+
+</div>

@@ -7,7 +7,31 @@
     position: relative;    /* para poder posicionar el texto de forma absoluta */
     
   }
-  
+  .txt{
+    flex-basis: 100%;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2.5vw;
+    color: white;
+    padding: 40px;
+    font: inherit;
+    vertical-align: baseline;
+    line-height: 1.3em;
+    display: block;
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+  .img{
+    position: relative;
+    background: transparent url(https://www.adobe.com/express/create/banner/media_188b208e46e0e140c0ec6bc8e36077e0f44062e60.png?width=1200&format=pjpg&optimize=medium)  0 0 repeat;
+    width: 100%;
+    color: #fff;
+    display: block;
+    height: 307px;
+    overflow: hidden; 
+
+  }
   .card-title {
     position: absolute;    /* posición absolute con respecto al padre */
     font-size: 1em;

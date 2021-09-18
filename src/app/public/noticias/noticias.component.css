@@ -1,6 +1,11 @@
-
+.fua{
+    color: #353535;
+  font-size: 50px;
+  font-family: "Cormorant Garamond", serif;
+}
 .content{
     height: 100vh;
+   
 }
 .frame {
     width: 90%;
