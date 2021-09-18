@@ -15,7 +15,7 @@ export class NoticiasComponent implements OnInit {
   constructor(private noticia_servicio: NoticiaService) { 
     this.noticia = new Noticia();
     this.vector_noticia = new Array<Noticia>();
-    this.cargarNoticia();
+    //this.cargarNoticia();
   }
 
   ngOnInit(): void {

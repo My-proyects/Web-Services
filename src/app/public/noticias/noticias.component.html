@@ -1,37 +1,51 @@
-<form class="container">
-    <div class="form-group row">
-        <label for="categoria" class="col-6">Categor&iacute;a</label>
-        <select name="categoria" id="categoria" class="form-control col-6" [(ngModel)]="categoria">
+<div class="container content ">
+    <!-- <div class="form-group ">
+        <label for="categoria" class="">Categor&iacute;a</label>
+        <select name="categoria" id="categoria" class="" [(ngModel)]="categoria">
             <option value="soccer">soccer</option>
             <option value="cricket">cricket</option>
             <option value="basketball">basketball</option>
         </select>
+    </div> -->
+    
+    <div class="row">
+        <div class="frame">
+            <!-- →  despues aplico esto --> 
+            <button class="btn btn-default custom-btn btn-9" >Futbool</button>
+            <button class="btn btn-default  custom-btn btn-9 " >basket</button>
+            <button class="btn btn-default  custom-btn  btn-9" >tricket</button>
+            <!-- ← despuesto applico esto-->
+        </div>
     </div>
-    <div class="form-group row ml-4">
-        <button type="button" class="btn btn-primary" (click)="cargarNoticia()">Cargar Noticias</button>
+   
+    <div class="row">
+        <section class="row">
+            <h1 class="col-md-12 text-center h1title">
+                Noticias Al Momento Deportes
+            </h1>
+            <div class="row" *ngFor="let item of vector; let i=index">
+                <div class="col-md-4 col-sm-12 mb-6" *ngFor="let c of item">
+
+                    <div class="card border-0">
+                        <img src="{{c.img}}" class="card-img-top" alt="..." height="150" width="150">
+                        <div class="card-body border-0">
+                            <h4>{{c.tit}}</h4>
+                            <p class="card-text">{{c.con}}
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </section>
     </div>
+
+</div>
+<form class="container bg-warning">
+
 </form>
 <div class="container">
-    <section class="row">
-        <h1 class="col-md-12 text-center h1title">
-            Últimas noticias
-        </h1>
-        <div class="row" *ngFor="let item of vector; let i=index">
-            <div class="col-md-4 col-sm-12 mb-6" *ngFor="let c of item">
-                
-                <div class="card border-0" >
-                    <img src="{{c.img}}" class="card-img-top" alt="..." height="150" width="150">
-                    <div class="card-body border-0">
-                        <h4 >{{c.tit}}</h4>
-                        <p class="card-text">{{c.con}}
-                        </p>
-                    </div>
-                </div>
-                <br>
-            </div>
-        </div>
-    </section>
 
-    
+
+
 </div>
-

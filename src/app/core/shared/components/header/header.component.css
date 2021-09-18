@@ -1,0 +1,15 @@
+
+/* .content_div_one_photo {
+   width: 100%;
+  } */
+  
+  .padre {
+    position: relative;    /* para poder posicionar el texto de forma absoluta */
+    
+  }
+  
+  .card-title {
+    position: absolute;    /* posición absolute con respecto al padre */
+    font-size: 1em;
+      top: 100px;
+  }
