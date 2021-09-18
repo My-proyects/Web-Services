@@ -28,9 +28,14 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -124,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "Web-Services"
+  "defaultProject": "Web-Services",
+  "cli": {
+    "analytics": "0c189959-48e7-4a4d-b1bd-970ad3c45af8"
+  }
 }
