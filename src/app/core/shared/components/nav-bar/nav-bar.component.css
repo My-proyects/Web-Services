@@ -1,0 +1,20 @@
+.content{
+    background-color: #FFFFFF;
+}
+.nav-link a:hover{
+    border-radius: 5px !important;
+    backdrop-filter: saturate(80%);
+    color: white !important;
+} 
+
+.nav-pers{
+    text-transform: uppercase ;
+    color: rgb(255, 255, 255) !important;
+    font-family: sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    background-color: rgba(95, 93, 93, 0.1);
+    backdrop-filter: blur(30px);
+    margin-right: 4px;
+    border-radius: 5px;
+}
