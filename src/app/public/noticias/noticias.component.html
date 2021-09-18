@@ -1,1 +1,44 @@
-<p>noticias works!</p>
+<form class="container">
+    <div class="form-group row">
+        <!-- <label for="categoria" class="col-6">Categor&iacute;a</label> -->
+        <select name="categoria" id="categoria" class="form-control col-6" >
+            <option value="soccer">soccer</option>
+            <option value="cricket">cricket</option>
+            <option value="basketball">basketball</option>
+        </select>
+    </div>
+    <div class="form-group row ml-4">
+        <button type="button" class="btn btn-primary" >Cargar Noticias</button>
+    </div>
+</form>
+<div class="container">
+    <section class="col-md-9">
+        <h1 class="col-md-12 text-center h1title">
+            Últimas noticias
+        </h1>
+        <!-- <div class="row" *ngFor="let item of vector; let i=index">
+            <div class="col mb-6" *ngFor="let c of item">
+                
+                <div class="card border-0" >
+                    <img src="{{c.img}}" class="card-img-top" alt="..." height="150" width="150">
+                    <div class="card-body border-0">
+                        <h4 >{{c.tit}}</h4>
+                        <p class="card-text">{{c.con}}
+                        </p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div> -->
+    </section>
+    <aside class="col-md-3 d-none d-md-block mt-5">
+        <div class="row">
+          <img src="https://i.pinimg.com/originals/c4/b9/f8/c4b9f883038c91c421466f72b1815cc1.jpg">
+          <img src="https://i.pinimg.com/originals/c4/b9/f8/c4b9f883038c91c421466f72b1815cc1.jpg">
+
+        </div>
+
+      </aside>
+    
+</div>
+
